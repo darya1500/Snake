@@ -169,7 +169,7 @@ public class Game extends Application implements GameScreen {
     }
 
     private void createBorderImage() {
-        InputStream inputStream = Game.class.getResourceAsStream("screen.png");
+        InputStream inputStream= this.getClass().getClassLoader().getResourceAsStream("screen.png");
         Image image = new Image(inputStream);
         ImageView imageView = new ImageView(image);
         imageView.setFitWidth((double)(this.width * cellSize + 250));
